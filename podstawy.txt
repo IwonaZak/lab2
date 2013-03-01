@@ -1,0 +1,42 @@
+ a)Czym jest system kontroli wersji
+  System kontroli wersji œledzi wszystkie zmiany
+  dokonywane na pliku (lub plikach) i umo¿liwia przywo³anie dowolnej wczeœniejszej wersji. 
+  
+ b)Jak wygl¹da typowy "workflow"
+  Oprogramowanie takie pozwala na okreœlenie jakie role w przetwarzaniu dokumentów
+  pe³ni¹ osoby uczestnicz¹ce w wykonywaniu danej czynnoœci oraz jakie s¹ stany poœrednie dokumentów.
+  ka¿dy z etapów przetwarzania informacji charakteryzuje siê okreœlonym zbiorem osób 
+  wykonuj¹cych okreœlone operacje na dokumentach oraz okreœlonym zestawem mo¿liwych stanów 
+  dokumentu. S¹ to charakterystyczne cechy procesu workflow.
+ 
+  c) czym ró¿ni scentralizowany i rozproszony system kontroli wersji
+  
+   Systemy takie jak CVS, Subversion czy Perforce sk³adaj¹ siê z jednego serwera,
+   który zawiera wszystkie pliki poddane kontroli wersji, oraz klientów którzy mog¹ 
+   siê z nim ³¹czyæ i uzyskaæ dostêp do najnowszych wersji plików.
+   W systemach DVCS (takich jak Git, Mercurial, Bazaar lub Darcs) klienci nie dostaj¹ 
+   dostêpu jedynie do najnowszych wersji plików ale w pe³ni kopiuj¹ ca³e repozytorium. 
+   Gdy jeden z serwerów, u¿ywanych przez te systemy do wspó³pracy, ulegnie awarii, 
+   repozytorium ka¿dego klienta mo¿e zostaæ po prostu skopiowane na ten serwer w 
+   celu przywrócenia go do pracy
+   
+  d) wyt³umacz do czego s³u¿¹ polecenia: 
+
+    init -  tworzy repozytorium w katalogu w ktorym sie znajdujemy
+    clone - Polecenie to stworzy nam klona repozytorium na naszej lokalnej maszynie
+    status - sprawdzamy status naszego repozytorium, to polecenie poka¿e które pliki zmienione, a które nowe
+    diff -  pokazuje zmiany w plikach w katalogu roboczym i w przechowalni.
+    commit - To polecenie potwierdza wszystkie zmiany w plikach. Otwiera siê domyœlny edytor, 
+    w którym opisujesz zmiany, które wprowadzi³eœ.
+    reset -  resetuje zmiany w lokalnym repozytorium.
+    rm - usuwanie plików z gita
+    mv - s³u¿y do zmiany nazw plików w reprezytorium
+    branch - zarz¹dza ga³êziami dostêpnymi w reprezytorium
+    checkout - przejœcie do innej ga³êzi lub taga 
+    merge -  aby zintegrowaæ ga³êzie (scaliæ)
+    log - pozwala sprawdziæ wproadzone zmiany
+    stash - pozwala na "odsuniêcie" wprowadzonych 
+    zmian  aktualnie wprowadzonych do projektu bez koniecznoœci commitowania ich.
+    pull - pobranie plików ze zdalnego repozytorium i automatyczne wykonanie merge
+    push - wys³anie zmian na zdalny serwer
+   
